@@ -206,10 +206,10 @@
 - (BOOL)performOpen:(NSError**)error {
   GWS_DCHECK(_contentType);
   GWS_DCHECK(_reader);
-  if (_opened) {
-    GWS_DNOT_REACHED();
-    return NO;
-  }
+//   if (_opened) {
+//     GWS_DNOT_REACHED();
+//     return NO;
+//   }
   _opened = YES;
   return [_reader open:error];
 }
