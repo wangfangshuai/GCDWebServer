@@ -258,10 +258,10 @@ NSString* const GCDWebServerRequestAttribute_RegexCaptures = @"GCDWebServerReque
 - (BOOL)performOpen:(NSError**)error {
   GWS_DCHECK(_contentType);
   GWS_DCHECK(_writer);
-//   if (_opened) {
-//     GWS_DNOT_REACHED();
-//     return NO;
-//   }
+  if (_opened) {
+    GWS_DNOT_REACHED();
+    return NO;
+  }
   _opened = YES;
   return [_writer open:error];
 }
